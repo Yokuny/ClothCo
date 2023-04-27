@@ -24,6 +24,9 @@ const ResetStyle = createGlobalStyle`
 		color: #121212;
 		vertical-align: baseline;
 	}
+	a:hover, svg:hover, button:hover {
+		cursor: pointer;
+	}
 	article, aside, details, figcaption, figure, 
 	footer, header, hgroup, menu, nav, section {
 		display: block;

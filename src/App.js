@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Cart from "./pages/Cart"
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
 import Layout from "./Layout";
 function App() {
   return (
@@ -8,8 +10,8 @@ function App() {
         <Routes>
           <Route path="/" element={<div>main</div>} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/signIn" element={<></>} />
-          <Route path="/signUp" element={<></>} />
+          <Route path="/signIn" element={<SignIn />} />
+          <Route path="/signUp" element={<SignUp />} />
           <Route path="/checkout" element={<></>} />
         </Routes>
       </Layout>

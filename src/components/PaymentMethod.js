@@ -3,9 +3,6 @@ import styled from "styled-components";
 const UlStyle = styled.ul`
   display: flex;
   gap: 10px;
-  li {
-    cursor: pointer;
-  }
   li svg {
     height: 38px;
     font-size: 50px;

@@ -68,7 +68,6 @@ export const Header = styled.header`
     transition: all 0.2s ease-in-out;
   }
   div:last-child svg:hover {
-    cursor: pointer;
     padding: 0.5px;
     font-size: 19px;
   }
@@ -122,7 +121,6 @@ export const About = styled.div`
     padding: 1px;
   }
   div svg:hover {
-    cursor: pointer;
     padding: 0px;
     font-size: 24px;
   }

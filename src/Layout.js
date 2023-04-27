@@ -1,5 +1,5 @@
 import { TfiSearch, TfiUser, TfiBag } from "react-icons/tfi";
-import { Body, Header, About, Info, Footer } from "./Layout.styles.js";
+import { Body, Header, About, Info, Footer } from "./style/Layout.styles.js";
 import PaymentMethod from "./components/PaymentMethod";
 import {
   AiFillBehanceSquare,
@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
           <h4>Clothes co.</h4>
         </Link>
         <div>
-          <Link to="/signUp">
+          <Link to="/">
             <TfiSearch />
           </Link>
           <Link to="/signIn">
