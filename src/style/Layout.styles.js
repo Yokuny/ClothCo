@@ -5,7 +5,7 @@ export const Body = styled.div`
   margin: 0 auto;
   main {
     padding-top: 116px;
-    min-height: 100vh;
+    
   }
   @media (max-width: 768px) {
     main {

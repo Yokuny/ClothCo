@@ -24,6 +24,7 @@ export default function Product({ image, title, price, quantity }) {
     </Item>
   );
 }
+
 const Item = styled.div`
   width: 100%;
   display: flex;
@@ -54,6 +55,16 @@ const Block = styled.div`
   }
   p {
     font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 40%;
+    
+    div {
+      margin-bottom: 20px;
+    }
   }
 `;
 const Button = styled.div`

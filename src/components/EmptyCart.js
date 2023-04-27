@@ -19,10 +19,13 @@ const Container = styled.section`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 40px;
   h1 {
-    font-size: 40px;
     margin-top: 45px;
     margin-bottom: 30px;
+    font-family: "Instrument Serif", serif;
+    font-weight: 800;
+    font-size: 52px;
   }
   button {
     font-size: 17px;

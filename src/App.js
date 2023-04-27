@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Body from "./pages/Body.js";
 import Cart from "./pages/Cart"
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
@@ -8,7 +9,7 @@ function App() {
     <BrowserRouter>
       <Layout>
         <Routes>
-          <Route path="/" element={<div>main</div>} />
+          <Route path="/" element={<Body />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/signIn" element={<SignIn />} />
           <Route path="/signUp" element={<SignUp />} />
