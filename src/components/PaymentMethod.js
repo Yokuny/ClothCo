@@ -10,9 +10,8 @@ const UlStyle = styled.ul`
 `;
 const PaymentMethod = () => (
   <UlStyle>
-    <li class="list-payment__item">
+    <li>
       <svg
-        class="icon icon--full-color"
         viewBox="0 0 38 24"
         xmlns="http://www.w3.org/2000/svg"
         role="img"
@@ -31,9 +30,8 @@ const PaymentMethod = () => (
           fill="#142688"></path>
       </svg>
     </li>
-    <li class="list-payment__item">
+    <li>
       <svg
-        class="icon icon--full-color"
         viewBox="0 0 38 24"
         xmlns="http://www.w3.org/2000/svg"
         role="img"
@@ -54,9 +52,8 @@ const PaymentMethod = () => (
           d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z"></path>
       </svg>
     </li>
-    <li class="list-payment__item">
+    <li>
       <svg
-        class="icon icon--full-color"
         xmlns="http://www.w3.org/2000/svg"
         role="img"
         viewBox="0 0 38 24"
@@ -78,9 +75,8 @@ const PaymentMethod = () => (
         </g>
       </svg>
     </li>
-    <li class="list-payment__item">
+    <li>
       <svg
-        class="icon icon--full-color"
         viewBox="0 0 38 24"
         xmlns="http://www.w3.org/2000/svg"
         width="38"
@@ -105,9 +101,8 @@ const PaymentMethod = () => (
           d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path>
       </svg>
     </li>
-    <li class="list-payment__item">
+    <li>
       <svg
-        class="icon icon--full-color"
         viewBox="0 0 38 24"
         xmlns="http://www.w3.org/2000/svg"
         role="img"
@@ -126,9 +121,8 @@ const PaymentMethod = () => (
           fill="#3086C8"></path>
       </svg>
     </li>
-    <li class="list-payment__item">
+    <li>
       <svg
-        class="icon icon--full-color"
         viewBox="0 0 38 24"
         width="38"
         height="24"
@@ -171,12 +165,12 @@ const PaymentMethod = () => (
             x2="19.632"
             y2="9.104"
             gradientUnits="userSpaceOnUse">
-            <stop stop-color="#F89F20"></stop>
-            <stop offset=".25" stop-color="#F79A20"></stop>
-            <stop offset=".533" stop-color="#F68D20"></stop>
-            <stop offset=".62" stop-color="#F58720"></stop>
-            <stop offset=".723" stop-color="#F48120"></stop>
-            <stop offset="1" stop-color="#F37521"></stop>
+            <stop color="#F89F20"></stop>
+            <stop offset=".25" stopColor="#F79A20"></stop>
+            <stop offset=".533" stopColor="#F68D20"></stop>
+            <stop offset=".62" stopColor="#F58720"></stop>
+            <stop offset=".723" stopColor="#F48120"></stop>
+            <stop offset="1" stopColor="#F37521"></stop>
           </linearGradient>
           <linearGradient
             id="pi-paint1_linear"
@@ -185,10 +179,10 @@ const PaymentMethod = () => (
             x2="18.378"
             y2="6.446"
             gradientUnits="userSpaceOnUse">
-            <stop stop-color="#F58720"></stop>
-            <stop offset=".359" stop-color="#E16F27"></stop>
-            <stop offset=".703" stop-color="#D4602C"></stop>
-            <stop offset=".982" stop-color="#D05B2E"></stop>
+            <stop color="#F58720"></stop>
+            <stop offset=".359" stopColor="#E16F27"></stop>
+            <stop offset=".703" stopColor="#D4602C"></stop>
+            <stop offset=".982" stopColor="#D05B2E"></stop>
           </linearGradient>
         </defs>
       </svg>

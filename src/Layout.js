@@ -10,7 +10,7 @@ import {
 } from "react-icons/ai";
 import logo from "./assets/Logo.svg";
 import { Link } from "react-router-dom";
-const Layout = ({ children }) => {
+const Layout = ({ children, value }) => {
   return (
     <Body>
       <Header>
@@ -26,6 +26,7 @@ const Layout = ({ children }) => {
           </Link>
           <Link to="/cart">
             <TfiBag />
+            {value > 0 && <span>{value}</span>}
           </Link>
         </div>
       </Header>

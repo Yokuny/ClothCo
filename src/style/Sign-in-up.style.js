@@ -7,7 +7,6 @@ const SignForm = styled.form`
   gap: 10px;
 
   height: auto;
-  background-color: #f9f9f9;
   padding-top: 20px;
   padding-bottom: 20px;
   :before {

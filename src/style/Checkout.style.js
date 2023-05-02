@@ -1,34 +1,26 @@
-import { Link } from "react-router-dom";
-import styled  from "styled-components" 
+import styled from "styled-components";
 
-export default function EmptyCart() {
-
-
-  return (
-    <Container>
-      <h1>Your Cart is empty</h1>
-      <Link to="/">
-        <button>Continue shopping</button>
-      </Link>
-    </Container>
-  );
-}
-
-const Container = styled.section`
+export const Section = styled.section`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   padding: 40px;
+
   h1 {
     margin-top: 45px;
-    margin-bottom: 30px;
-    text-align: center;
+    margin-bottom: 15px;
     font-family: "Instrument Serif", serif;
     font-weight: 800;
-    font-size: 52px;
+    font-size: 40px;
+    text-align: center;
+  }
+  p {
+    margin-bottom: 40px;
+    text-align: center;
   }
   button {
+    color: #000;
     font-size: 17px;
     background-color: rgb(188, 254, 47);
     border: none;

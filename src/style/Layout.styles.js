@@ -59,6 +59,7 @@ export const Header = styled.header`
   }
 
   div:last-child {
+    position: relative;
     display: flex;
     gap: 20px;
   }
@@ -70,6 +71,15 @@ export const Header = styled.header`
   div:last-child svg:hover {
     padding: 0.5px;
     font-size: 19px;
+  }
+
+  div:last-child a > span {
+    position: absolute;
+    top: 10px;
+    right: -7px;
+    background-color: #bcfe2f;
+    padding: 2px;
+    border-radius: 8px;
   }
 `;
 
