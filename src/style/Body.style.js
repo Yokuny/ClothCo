@@ -17,9 +17,6 @@ export const BodyStyle = styled.div`
     padding-left: 20px;
     padding-right: 20px;
   }
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
   img {
     width: 100%;
     height: 100%;
@@ -46,11 +43,13 @@ export const BodyStyle = styled.div`
     font-size: 1rem;
   }
   @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     h6 {
-      font-size: 0.7rem;
+      margin-top: 10px;
       line-height: normal;
     }
     p {
+      margin-top: 6px;
       font-size: 0.9rem;
     }
   }
