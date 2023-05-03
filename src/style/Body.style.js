@@ -26,8 +26,8 @@ export const BodyStyle = styled.div`
     border-radius: 16px;
   }
   h6 {
+    font-size: 1rem;
     margin-left: 4px;
-    font-size: 0.8rem;
     letter-spacing: 0.5px;
     line-height: 30px;
   }
@@ -45,6 +45,7 @@ export const BodyStyle = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     h6 {
+      font-size: 0.8rem;
       margin-top: 10px;
       line-height: normal;
     }

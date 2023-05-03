@@ -12,19 +12,12 @@ const Body = () => {
     window.scrollTo(0, 0);
     const getProducts = async () => {
       try {
-        console.log("iniciou busca  ");
         const { data } = await axios.get(process.env.REACT_APP_API_URL);
-        console.log("buscou<<<<<<");
-        console.log(data);
-        console.log("process.env.REACT_APP_API_URL");
-        console.log(process.env.REACT_APP_API_URL);
         setProducts(data);
       } catch (error) {
-        console.log("erro na busca");
         console.log(error);
       }
     };
-    console.log("terminou busca");
     getProducts();
   }, []);
 
