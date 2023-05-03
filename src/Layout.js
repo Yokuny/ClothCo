@@ -8,7 +8,6 @@ import {
   AiFillLinkedin,
   AiFillYoutube,
 } from "react-icons/ai";
-import logo from "./assets/Logo.svg";
 import { Link } from "react-router-dom";
 const Layout = ({ children, value }) => {
   return (
@@ -33,7 +32,7 @@ const Layout = ({ children, value }) => {
       <main>{children}</main>
       <Footer>
         <About>
-          <img src={logo} alt="logo" />
+          <img src={"/logo.svg"} alt="logo" />
           <h3>Uma marca que busca inspirar e impulsionar a cultura criativa à frente.</h3>
           <p>
             Encaramos nosso trabalho com a mentalidade de que cada produto é uma experiência de aprendizado
