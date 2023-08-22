@@ -12,7 +12,6 @@ export const Panel = styled.section`
 
     list-style-type: disc;
     box-sizing: border-box;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     font-size: 1rem;
   }
   .type,
