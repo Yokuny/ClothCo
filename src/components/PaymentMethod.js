@@ -8,6 +8,7 @@ const UlStyle = styled.ul`
     font-size: 50px;
   }
 `;
+
 const PaymentMethod = () => (
   <UlStyle>
     <li>

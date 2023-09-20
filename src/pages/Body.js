@@ -1,18 +1,19 @@
-import { BodyStyle } from "../style/Body.style";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import axios from "axios";
+
+import { BodyStyle } from "../style/Body.style";
+import { reqString } from "../utils/reqString.js";
 
 const Body = () => {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log("entrou em busca");
     window.scrollTo(0, 0);
     const getProducts = async () => {
       try {
-        const { data } = await axios.get(process.env.REACT_APP_API_URL);
+        const { data } = await axios.get(reqString);
         setProducts(data);
       } catch (error) {
         console.log(error);

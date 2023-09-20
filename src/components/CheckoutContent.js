@@ -1,15 +1,14 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import axios from "axios";
+import { config } from "../utils/bearerToken.js";
+import { reqString } from "../utils/reqString.js";
 
-const CheckoutContent = ({ order, token }) => {
+const CheckoutContent = ({ order }) => {
   const [invoice, setInvoice] = useState([]);
 
   useEffect(() => {
-    const config = { headers: { Authorization: `Bearer ${token}` } };
-
     const getProducts = async () => {
-      const reqString = process.env.REACT_APP_API_URL;
       try {
         const orderContent = await axios.get(`${reqString}checkout/${order}`, config);
         setInvoice(orderContent.data);
@@ -20,7 +19,7 @@ const CheckoutContent = ({ order, token }) => {
       }
     };
     getProducts();
-  }, [order, token]);
+  }, [order]);
 
   return (
     <Table>

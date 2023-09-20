@@ -1,8 +1,10 @@
-import SignForm from "../style/Sign-in-up.style.js";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+import SignForm from "../style/Sign-in-up.style.js";
+import { reqString } from "../utils/reqString.js";
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -17,7 +19,7 @@ const SignUp = () => {
     if (name.length > 5 && email.length > 5 && password.length > 5 && repeatPassword === password) {
       const body = { name, email, password };
       try {
-        await axios.post(`${process.env.REACT_APP_API_URL}register`, body);
+        await axios.post(`${reqString}register`, body);
         navigate("/signIn");
       } catch (error) {
         console.log(error);

@@ -1,9 +1,11 @@
-import SignForm from "../style/Sign-in-up.style.js";
-import LogOut from "../components/LogOut";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+import SignForm from "../style/Sign-in-up.style.js";
+import LogOut from "../components/LogOut";
+import { reqString } from "../utils/reqString.js";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -21,7 +23,7 @@ const SignIn = () => {
     if (email.length > 5 && password.length > 5) {
       try {
         const body = { email, password };
-        const token = await axios.post(`${process.env.REACT_APP_API_URL}login`, body);
+        const token = await axios.post(`${reqString}login`, body);
         localStorage.setItem("token", token.data);
         navigate("/");
       } catch (error) {

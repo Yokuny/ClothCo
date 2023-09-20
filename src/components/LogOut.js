@@ -8,6 +8,7 @@ const LogOut = () => {
     localStorage.clear();
     navigate("/signIn");
   };
+
   return (
     <>
       <SignForm title="Log out" onSubmit={logOut}>

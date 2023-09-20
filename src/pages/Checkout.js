@@ -1,7 +1,8 @@
-import CheckoutContent from "../components/CheckoutContent";
-import { Section } from "../style/Checkout.style";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+
+import { Section } from "../style/Checkout.style";
+import CheckoutContent from "../components/CheckoutContent";
 
 export default function Checkout() {
   const { id } = useParams();

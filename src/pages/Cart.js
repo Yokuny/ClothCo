@@ -1,10 +1,13 @@
-import { Section, Title, Products, Total } from "../style/Cart.style";
-import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+import { Section, Title, Products, Total } from "../style/Cart.style";
 import EmptyCart from "../components/EmptyCart";
 import Product from "../components/Product";
-import axios from "axios";
+import { reqString } from "../utils/reqString.js";
+import { config } from "../utils/bearerToken.js";
 
 const Cart = () => {
   const [removing, setRemoving] = useState(false);
@@ -12,15 +15,16 @@ const Cart = () => {
   const [products, setProducts] = useState([]);
   const [total, setTotal] = useState(0);
   const navigate = useNavigate();
+
   useEffect(() => {
     window.scrollTo(0, 0);
     const itens = JSON.parse(localStorage.getItem("cart")) || [];
     setItems(itens);
   }, [removing]);
+
   useEffect(() => {
     const getProducts = async () => {
       if (items.length > 0) {
-        const reqString = process.env.REACT_APP_API_URL;
         try {
           const promises = items.map((item) => axios.get(`${reqString}product/${item._id}`));
           const responses = await Promise.all(promises);
@@ -34,6 +38,7 @@ const Cart = () => {
     };
     getProducts();
   }, [items]);
+
   useEffect(() => {
     const totalAmount = items.reduce((total, item) => {
       const product = products.find((p) => p._id === item._id);
@@ -41,24 +46,23 @@ const Cart = () => {
     }, 0);
     setTotal(totalAmount);
   }, [items, products]);
+
   const setTotalPrice = (value, type) => {
     if (type === "increase") setTotal((curr) => curr + value);
     if (type === "decrease") setTotal((curr) => curr - value);
   };
+
   const finishPayment = async () => {
     const token = localStorage.getItem("token");
-    console.log(token);
     if (!token) return navigate("/signIn");
 
     const products = JSON.parse(localStorage.getItem("cart"));
     const body = { products: products.map((item) => ({ id: item._id, quantity: item.quantity })) };
 
-    const reqString = process.env.REACT_APP_API_URL;
-    const config = { headers: { Authorization: `Bearer ${token}` } };
-
     try {
       const res = await axios.post(`${reqString}checkout`, body, config);
-      navigate(`/checkout/${res.data}`);
+      alert("Payment successful!");
+      navigate(`/checkout/${res.data?.orderId}`);
     } catch (err) {
       console.log(err);
     }

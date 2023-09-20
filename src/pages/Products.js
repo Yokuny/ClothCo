@@ -1,9 +1,11 @@
-import { Panel, Button } from "../style/Products.style.js";
 import { useEffect, useState, useContext } from "react";
+import axios from "axios";
 import { useParams, useNavigate } from "react-router";
 import { HiPlusSm, HiMinusSm } from "react-icons/hi";
+
+import { Panel, Button } from "../style/Products.style.js";
 import { CartContext } from "../context/cartContext";
-import axios from "axios";
+import { reqString } from "../utils/reqString.js";
 
 export default function Products() {
   const { setCart } = useContext(CartContext);
@@ -15,7 +17,7 @@ export default function Products() {
   useEffect(() => {
     window.scrollTo(0, 0);
     axios
-      .get(`${process.env.REACT_APP_API_URL}product/${id}`)
+      .get(`${reqString}product/${id}`)
       .then(({ data }) => {
         setItem(data);
       })
