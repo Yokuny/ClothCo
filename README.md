@@ -55,6 +55,8 @@ Ao finalizar a compra e a ordem de compra é solicitada, o banco de dados retorn
 3. **Finalize a compra** e receba a nota fiscal com os dados da transação.
 <br>
 
+### Interface
+
 <div style="display: flex; flex-wrap: wrap;">
 <img src="./public/cart.png" alt="cart" width="45%" />
 <img src="./public/product-info.png" alt="product-info" width="45%" />
@@ -65,6 +67,55 @@ Ao finalizar a compra e a ordem de compra é solicitada, o banco de dados retorn
 
 </div>
 <br>
+
+### Servidor
+
+- **GET** localhost:PORT/
+Todos os produtos cadastrados no banco de dados serão retornados.
+```
+    [
+        {
+            "_id": "6451786d24e368d53c9b4d63",
+            "title": "Wool Creator Cap - Black",
+            "price": 44,
+            "img": "/cap-black-front.jpg",
+            "imgb": "/cap-black-back.jpg"
+        },
+        {
+            "_id": "6451786d24e368d53c9b4d64",
+            "title": "Life Lesson Cap - Cardinal",
+            "price": 40,
+            "img": "/cap-orange-front.jpg",
+            "imgb": "/cap-orange-back.jpg"
+        }, ...
+    ]        
+```
+
+- **GET** localhost:PORT/product/:id
+Para retornar o produto com o ID correspondente, deve-se passar o product id como parâmetro.
+```
+    {
+        "_id": "6451786d24e368d53c9b4d63",
+        "title": "Wool Creator Cap - Black",
+        "price": 44,
+        "img": "/cap-black-front.jpg",
+        "imgb": "/cap-black-back.jpg"
+    }
+```
+
+- **POST** localhost:PORT/register
+Um novo usuário será criado no banco de dados se name, email e password forem passados no body da requisição.
+```
+    201 Created
+```
+
+- **POST** localhost:PORT/login
+Para retornar o token de autenticação, deve-se passar corretamente email e password do usuário cadastrado.
+```
+    e5a752de-150e-4e6d-be0d-d26156b6f476
+```
+
+
 
 ### Tecnologias usadas
 
